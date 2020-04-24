@@ -164,3 +164,13 @@ class HeavyMetalSinger : Singer  {
 let teste = HeavyMetalSinger(noiseLevel: 20, name: "Matheussss", age: 20)
 print(teste.noiseLevel)
 print(teste.sing())
+
+
+/*Valores vs Referências
+Quando você copia uma estrutura, a coisa toda é duplicada, incluindo todos os seus valores. Isso significa que alterar uma cópia de uma estrutura não altera as outras cópias - elas são todas individuais. Com as classes, cada cópia de um objeto aponta para o mesmo objeto original; portanto, se você alterar um, todos eles serão alterados. O Swift chama estruturas "tipos de valor" porque eles apenas apontam para um valor e classes "tipos de referência" porque objetos são apenas referências compartilhadas para o valor real.
+
+Essa é uma diferença importante e significa que a escolha entre estruturas e classes é importante:
+
+Se você deseja ter um estado compartilhado que é passado e modificado no local, você está procurando classes. Você pode passá-los para funções ou armazená-los em matrizes, modificá-los lá e ter essa alteração refletida no restante do seu programa.
+Se você deseja evitar o estado compartilhado em que uma cópia não pode afetar todas as outras, está procurando estruturas. Você pode passá-los para funções ou armazená-los em matrizes, modificá-los lá e eles não serão alterados onde quer que sejam referenciados.
+Se eu resumisse essa diferença fundamental entre estruturas e classes, diria o seguinte: as classes oferecem mais flexibilidade, enquanto as estruturas oferecem mais segurança. Como regra básica, você sempre deve usar estruturas até ter um motivo específico para usar classes.*/
